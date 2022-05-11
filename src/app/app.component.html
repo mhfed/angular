@@ -13,10 +13,10 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of fruits">
-          <td>{{ item.name }}</td>
-          <td>{{ item.price }}</td>
-          <td *ngIf="item.sale > 0" [ngClass]="{ sale: item.sale > 0 }">
-            {{ item.sale }}
+          <td>{{ item.name | uppercase }}</td>
+          <td>{{ item.price | currency: "VND":"symbol":"1.0" }}</td>
+          <td [ngClass]="{ sale: item.sale > 0 }">
+            {{ item.sale | onSale | uppercase }}
           </td>
         </tr>
       </tbody>

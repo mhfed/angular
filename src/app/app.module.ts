@@ -9,6 +9,7 @@ import { TestComponent } from './components/test/test.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { OnSalePipe } from './pipe/on-sale.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AboutComponent } from './components/about/about.component';
     DashboardComponent,
     HomeComponent,
     AboutComponent,
+    OnSalePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
