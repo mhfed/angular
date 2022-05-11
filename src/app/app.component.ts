@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public name = 'Hieu Minh';
-  public resetName(): void {
-    this.name = '';
-  }
+  public age = 10;
 }
