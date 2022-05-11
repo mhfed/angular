@@ -2,11 +2,9 @@
   <a routerLink="hello">Hello</a>
   <a routerLink="about">About</a>
   <hr />
-  <h2>{{ name }}</h2>
-  <input type="text" value="{{ name }}" />
-  <br />
-  <input type="text" [value]="name" title="Day la {{ name }}" />
-  <br />
-  <input type="text" [value]="name" [title]="'Day la' + name" />
+  <div>
+    <h2 *ngIf="age >= 20">Bạn đã đủ tuổi</h2>
+    <h2 *ngIf="age < 20">Bạn chưa đủ tuổi</h2>
+  </div>
 </header>
 <router-outlet></router-outlet>
