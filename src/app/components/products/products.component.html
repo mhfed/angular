@@ -1,0 +1,39 @@
+<div class="container">
+  <div>
+    <input type="text" [(ngModel)]="productName" />
+    <span>{{ productName }}</span>
+  </div>
+  <hr />
+  <button (click)="onHandleClick()" class="btn btn-primary">Click</button>
+  <span>{{ isStatus }}</span>
+  <h2>{{ componentName }}</h2>
+  <div *ngIf="isStatus">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#STT</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <span *ngIf="product.status">Con hang</span
+            ><span *ngIf="!product.status">Het hang</span>
+          </td>
+          <td>
+            <button (click)="onHandleRemove(product.id)" class="btn btn-danger">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
